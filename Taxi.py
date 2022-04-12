@@ -67,10 +67,10 @@ class Taxi(State):
 
 
 def main():
-    passanger = [2,7] #[4,5]
-    destiny = [9,9]
-    blocks = [[0,4],[1,4],[2,4],[3,4],[4,4],[5,4],[6,4],[7,4],[8,4]]
-    size = 10
+    passanger = [0,0] 
+    destiny = [4,0]
+    blocks = []
+    size = 5
 
     state = Taxi([0,0],passanger,destiny,blocks,size, False,'')
     algorithm = AEstrela()
