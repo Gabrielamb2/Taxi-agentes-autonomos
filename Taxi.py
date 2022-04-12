@@ -19,7 +19,7 @@ class Taxi(State):
     def valido(self, taxi_x):
         for c in self.coordenadas:
             if (c == taxi_x):
-                return False
+                return False #se a localizacao do obstaculo for igual a do taxi retorna falso
         return True
     def sucessors(self):
         sucessores = []
@@ -61,9 +61,9 @@ class Taxi(State):
 
     def h(self):
         if(self.ta_no_carro):
-            return abs(self.taxi[0] - self.destino[0]) + abs(self.taxi[1] - self.destino[1]) #distancia
+            return abs(self.taxi[0] - self.destino[0]) + abs(self.taxi[1] - self.destino[1]) #distancia ate o destino 
         else:
-            return abs(self.taxi[0] - self.passageiro[0]) + abs(self.taxi[1] - self.passageiro[1]) 
+            return abs(self.taxi[0] - self.passageiro[0]) + abs(self.taxi[1] - self.passageiro[1])  #distancia ate o passageiro
 
 
 def main():
