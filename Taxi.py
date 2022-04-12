@@ -72,7 +72,7 @@ def main():
     blocks = []
     size = 5
 
-    state = Taxi([0,0],passanger,destiny,blocks,size, False,'')
+    state = Taxi([0,2],passanger,destiny,blocks,size, False,'')
     algorithm = AEstrela()
     result = algorithm.search(state)
 
