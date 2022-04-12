@@ -18,7 +18,7 @@ class Taxi(State):
     
     def valido(self, taxi_x):
         for c in self.coordenadas:
-            if (c == taxi_x): 
+            if (c == taxi_x):
                 return False
         return True
     def sucessors(self):
@@ -63,11 +63,11 @@ class Taxi(State):
         if(self.ta_no_carro):
             return abs(self.taxi[0] - self.destino[0]) + abs(self.taxi[1] - self.destino[1]) #distancia
         else:
-            return abs(self.taxi[0] - self.passageiro[0]) + abs(self.taxi[1] - self.passageiro[1]) + self.tamanho*10
+            return abs(self.taxi[0] - self.passageiro[0]) + abs(self.taxi[1] - self.passageiro[1]) 
 
 
 def main():
-    passanger = [2,7] 
+    passanger = [2,7] #[4,5]
     destiny = [9,9]
     blocks = [[0,4],[1,4],[2,4],[3,4],[4,4],[5,4],[6,4],[7,4],[8,4]]
     size = 10
@@ -75,7 +75,7 @@ def main():
     state = Taxi([0,0],passanger,destiny,blocks,size, False,'')
     algorithm = AEstrela()
     result = algorithm.search(state)
-    
+
     if result != None:
         print('Achou!')
         print(result.show_path())
